@@ -1,0 +1,65 @@
+@import "financialsBar"
+$orange: #ff7930;
+$green: #29aeaa;
+i.orange{
+	color: $orange;
+}
+i.black{
+	color: #000;
+}
+.financials-item > h3{
+	font-size: 20px;
+	color: #333;
+}
+.financials-item > h3.newer{
+	color: $orange
+}
+.financials-item > h3 > i{
+	color: $green;
+	font-weight: bold;
+}
+
+@mixin title_icon{
+	display: inline-block;
+    margin-left: 5px;
+    width: 31px;
+    height: 17px;
+    vertical-align: bottom;
+    /*overflow: hidden;*/
+    background-image: url(financials_icons.png);
+}
+.financials-item-intro-title > i.newer{
+	@include title_icon;
+    background-position:0px 0px;
+}
+.financials-item-intro-title > i.channel{
+	@include title_icon;
+	background-position:0px -18px;
+}
+.financials-item-intro-title > i.limit{
+	@include title_icon;
+	background-position:0px -36px;
+}
+.wbtn.wtbn-nothing{
+	color: #999;
+    border: none;
+    &:hover{
+    	text-decoration: underline;
+    }
+}
+
+/*给hovertip需求增加的修改*/
+.financials-item-intro-title > .newer{
+	.hovertips{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: none;
+        .hovertips-content{
+            width: 270px;
+        }
+        .hovertips-arrow{
+            left: 20px;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+// ICONS
+//
+// 按钮可以通过添加`.ico-`类来产生。
+//
+// Styleguide 5
+
+// 错误ICON
+//
+// .ico-err-normal         - 警告40*40
+// .ico-err-small          - 警告12*12
+//
+// Markup:
+// <i class="{$modifiers}"></i>
+//
+// Styleguide 5.1
+
+// 帮助ICON
+//
+// .ico-help-normal         - 帮助40*40
+// .ico-help-small          - 帮助12*12
+//
+// Markup:
+// <i class="{$modifiers}"></i>
+//
+// Styleguide 5.2
+
+// 提示ICON，警告ICON
+//
+// .ico-info-normal         - 提示40*40
+// .ico-info-small          - 提示12*12
+// .ico-warn-normal         - 提示40*40
+// .ico-warn-small          - 提示12*12
+//
+// Markup:
+// <i class="{$modifiers}"></i>
+//
+// Styleguide 5.3
+
+// 成功ICON
+//
+// .ico-succ-normal         - 成功40*40
+// .ico-succ-small          - 成功12*12
+//
+// Markup:
+// <i class="{$modifiers}"></i>
+//
+// Styleguide 5.4
+
+
+@mixin ico($type, $size) {
+    vertical-align: top;
+    background: url("/img/icon-tips.png") no-repeat;
+
+    @if $size==normal{
+        width: 40px;
+        height: 41px;
+
+        @if $type==help {
+            background-position: 0 0;
+        }
+        @if $type==succ {
+            background-position: 0 -48px;
+        }
+        @if $type==err {
+            background-position: 0 -96px;
+        }
+        @if $type==info{
+            background-position: 0 -144px;
+        }
+        @if $type==warn{
+            background-position: 0 -144px;
+        }
+    }
+    @if $size==small{
+        width: 12px;
+        height: 12px;
+
+        @if $type==help {
+            background-position: -42px -2px;
+        }
+        @if $type==succ {
+            background-position: -42px -18px;
+        }
+        @if $type==err {
+            background-position: -42px -34px;
+        }
+        @if $type==info{
+            background-position: -42px -50px;
+        }
+        @if $type==info{
+            background-position: -42px -50px;
+        }
+        @if $type==minus {
+            background-position: -42px -66px;
+        }
+    }
+
+    display:inline-block;
+    // float: left;
+    // margin-top: 4px;
+}
+
+
+@each $size in normal, small {
+    @each $type in err, help, info, warn, succ, minus {
+        .ico-#{$type}-#{$size} {
+            @include ico(#{$type}, #{$size});
+        }
+    }
+}
+

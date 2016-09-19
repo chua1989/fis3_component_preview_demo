@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>理财农场-组件可视化</title>
+	<link rel="import" href="/common/html/meta.html?__inline">
+	<link rel="stylesheet" type="text/css" href="/common/css/common.scss" />
+	<link rel="stylesheet" type="text/css" href="v_components.css" />
+	<script type="text/javascript" src="/common/dep/mod.js" data-loader></script>
+	<script type="text/javascript" src="/common/dep/jquery.js" data-loader></script>
+	<script type="text/javascript" src="/common/js/common.js" data-loader></script>
+	<script type="text/javascript" src="v_components.js" data-loader></script>
+</head>
+<body>	
+<div class="left-side"><div class="left-side-item visible" data-mod="financialsSmlBar.js">financialsSmlBar.js</div><div class="left-side-item" data-mod="rightsideBar.js">rightsideBar.js</div><div class="left-side-item" data-mod="tips.js">tips.js</div><div class="left-side-item" data-mod="financialsBar.js">financialsBar.js</div><div class="left-side-item" data-mod="hovertips.js">hovertips.js</div><div class="left-side-item" data-mod="pageCtrl.js">pageCtrl.js</div></div><div class="right-side"><div class="right-side-top"><div class="right-side-top-item visible" data-mod="financialsSmlBar.js">
+    <!-- 定期理财 -->
+    <div class="js-financialsSmlBar1"></div>
+    <!-- 债权转让 -->
+    <div class="js-financialsSmlBar2"></div>
+    </div><div class="right-side-top-item" data-mod="rightsideBar.js">
+ 	<div class="js-rightsideBar"></div>
+
+	</div><div class="right-side-top-item" data-mod="tips.js">
+ 	<style>.relative{position:relative;}</style>
+ 	<div class="js-tips relative"></div>
+ 	
+ 	</div><div class="right-side-top-item" data-mod="financialsBar.js">
+    <!-- 新手 -->
+    <div class="js-financialsBar1"></div>
+    <!-- 活期 -->
+    <div class="js-financialsBar2"></div>
+    <!-- 定期 -->
+    <div class="js-financialsBar3"></div>
+
+    </div><div class="right-side-top-item" data-mod="hovertips.js">
+    <div class="js-hovertips"></div>
+    
+    </div><div class="right-side-top-item" data-mod="pageCtrl.js">
+    <div class="sort-page js-pagectrl"></div>
+    
+    </div></div><div class="right-side-bottom"><div class="right-side-bottom-item visible" data-mod="financialsSmlBar.js"><div class="right-side-bottom-item-author">作者：陈桦</div><div class="right-side-bottom-item-date">日期：2016-5-17</div><div class="right-side-bottom-item-description">描述：理财列表块状组件，依赖模版 financialsSmlBar.tpl，financialsSmlBar.scss</div><div class="right-side-bottom-item-code">样例：<div>html:<br><br>&lt;!--&nbsp;定期理财&nbsp;--&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="js-financialsSmlBar1"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;债权转让&nbsp;--&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="js-financialsSmlBar2"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>js:<br><br>var&nbsp;financialsSmlBar&nbsp;=&nbsp;require('/common/module/financialsBar/financialsSmlBar.js');<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;financialsSmlBar($('.js-financialsSmlBar1'),{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"regular",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bdid":&nbsp;1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"农优宝A1231213",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"term":&nbsp;1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"annualrate":&nbsp;0.09,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"interestRaise":&nbsp;0.01,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"surplusAmount":&nbsp;30000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"projectScale":&nbsp;50000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"packStatus":&nbsp;"RZZ",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"releaseDate":&nbsp;425132121,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bidType":&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"nowDate":&nbsp;45641231321,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"isDefault":0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'productType':&nbsp;'NYB',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'delayTime':&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;financialsSmlBar($('.js-financialsSmlBar2'),{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"creditTransfer",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;annualrate:0.11,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bdid:4005,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;packStatus:"ZRZ",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainAmount:0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainTerm:6,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title:"种植贷D31-002",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTerm:9,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zqid:132044,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zrAmount:100,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zrDate:"2016-07-01&nbsp;09:04:29",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zrTime:1467335069000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zrid:545,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'productType':&nbsp;'NYB',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'delayTime':&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</div></div><div class="right-side-bottom-item-content">其他：<div><br>@实例化&nbsp;financialsSmlBar&nbsp;=&nbsp;new&nbsp;financialsSmlBar(dom,&nbsp;datas);<br>&nbsp;&nbsp;@param&nbsp;dom&nbsp;{Dom}&nbsp;为理财块组件父级节点，将根据情况append模版，生成理财块节点；<br>&nbsp;&nbsp;@param&nbsp;datas&nbsp;{json}&nbsp;初始化组件的数据，数据格式如下<br><br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;@param&nbsp;type&nbsp;{String}&nbsp;理财类型：定期(regular)；债权转让(creditTransfer)<br>&nbsp;&nbsp;@param&nbsp;bdid&nbsp;{Number}&nbsp;标的id<br>&nbsp;&nbsp;@param&nbsp;title&nbsp;{String}&nbsp;标的名称<br>&nbsp;&nbsp;@param&nbsp;term&nbsp;{Number}&nbsp;投资期限（月）<br>&nbsp;&nbsp;@param&nbsp;annualrate&nbsp;{Number}&nbsp;投资年利率<br>&nbsp;&nbsp;@param&nbsp;interestRaise&nbsp;{Number}&nbsp;加息利率<br>&nbsp;&nbsp;@param&nbsp;surplusAmount&nbsp;{Number}&nbsp;剩余可投金额<br>&nbsp;&nbsp;@param&nbsp;projectScale&nbsp;{Number}&nbsp;项目规模<br>&nbsp;&nbsp;@param&nbsp;packStatus&nbsp;{String}&nbsp;状态，（新手和定期的状态为）SQZ:申请中;DSH:待审核;DFB:待发布;YFB:预发布;RZZ:融资中;DFP:待分配;YFP:已分配；HKZ:还款中;YJQ:已结清;YLB:已流宝;YDF:已垫付;YZF:已作废;YFP已分配<br>&nbsp;	（债权的状态为）ZRZ:转让中;YJS:已结束;<br>&nbsp;&nbsp;@param&nbsp;releaseDate&nbsp;{Number}&nbsp;发布时间（毫秒）<br>&nbsp;&nbsp;@param&nbsp;nowDate&nbsp;{Number}&nbsp;系统当前时间(毫秒)<br>&nbsp;&nbsp;@param&nbsp;bidType&nbsp;{Number}&nbsp;1:表示农优宝，2：表示新手标&nbsp;3表示种植贷&nbsp;4：债权转让&nbsp;5:分期乐<br>&nbsp;</div></div></div><div class="right-side-bottom-item" data-mod="rightsideBar.js"><div class="right-side-bottom-item-author">作者：陈桦</div><div class="right-side-bottom-item-date">日期：2016-5-9</div><div class="right-side-bottom-item-description">描述：首页右侧导航栏组件，依赖模版 rightsideBar.tpl，rightsideBar.scss;</div><div class="right-side-bottom-item-code">样例：<div>html:<br><br>&lt;div&nbsp;class="js-rightsideBar"&gt;&lt;/div&gt;<br><br>	<br>js:<br><br>var&nbsp;rightsideBar&nbsp;=&nbsp;require('/common/module/rightsideBar/rightsideBar.js');<br>	new&nbsp;rightsideBar($('.js-rightsideBar'));<br><br>	</div></div><div class="right-side-bottom-item-content">其他：<div><br>@实例化：rightsideBar&nbsp;=&nbsp;new&nbsp;rightsideBar(dom,&nbsp;datas);<br>&nbsp;&nbsp;@param&nbsp;dom&nbsp;{Dom}&nbsp;为头部组件父级节点，将根据情况append模版，生成头部节点；<br>&nbsp;&nbsp;@param&nbsp;datas&nbsp;{json}&nbsp;初始化组件的数据，数据格式如下<br><br>&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;</div></div></div><div class="right-side-bottom-item" data-mod="tips.js"><div class="right-side-bottom-item-author">作者：</div><div class="right-side-bottom-item-date">日期：</div><div class="right-side-bottom-item-description">描述：</div><div class="right-side-bottom-item-code">样例：<div>html:<br><br>&lt;style&gt;.relative{position:relative;}&lt;/style&gt;<br>&nbsp;	&lt;div&nbsp;class="js-tips&nbsp;relative"&gt;&lt;/div&gt;<br>&nbsp;	<br>&nbsp;	<br>js:<br><br>var&nbsp;Tips&nbsp;=&nbsp;require('/common/module/tips/tips.js'),<br>&nbsp;		$tips&nbsp;=&nbsp;$('.js-tips');<br><br>&nbsp;	new&nbsp;Tips($tips,&nbsp;'tips测试文本',&nbsp;'链接文本',&nbsp;'/pcapi/xxx.htm','tips','_self');<br><br>	</div></div><div class="right-side-bottom-item-content">其他：<div><br></div></div></div><div class="right-side-bottom-item" data-mod="financialsBar.js"><div class="right-side-bottom-item-author">作者：陈桦</div><div class="right-side-bottom-item-date">日期：2016-5-8</div><div class="right-side-bottom-item-description">描述：首页理财块状组件，依赖模版 financialsBar.tpl，financialsBar.scss</div><div class="right-side-bottom-item-code">样例：<div>html:<br><br>&lt;!--&nbsp;新手&nbsp;--&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="js-financialsBar1"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;活期&nbsp;--&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="js-financialsBar2"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;定期&nbsp;--&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="js-financialsBar3"&gt;&lt;/div&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<br>js:<br><br>var&nbsp;financialsBar&nbsp;=&nbsp;require('/common/module/financialsBar/financialsBar.js');<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;financialsBar($('.js-financialsBar1'),&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"novice",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bdid":&nbsp;1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"农优宝A1231213",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"新手专享",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"term":&nbsp;1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"annualrate":&nbsp;0.09,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"interestRaise":&nbsp;0.005,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"surplusAmount":&nbsp;30000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"projectScale":&nbsp;50000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"status":&nbsp;"RZZ",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"packStatus":&nbsp;"QGZ",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"releaseDate":&nbsp;425132121,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"nowDate":&nbsp;45641231321,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"surplusBuyCount":1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'productType':&nbsp;'NYB',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'delayTime':&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;financialsBar($('.js-financialsBar2'),&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"current",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;annualrate:0.058,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content:{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bdid:&nbsp;329,&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;"HQB20160630-0002",&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title:&nbsp;"零钱包",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;status:&nbsp;"YME",&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;surplusAmount:&nbsp;0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;projectScale:1215300,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;releaseDate:1467336600000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endTime:1467356400000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hoursPoints:"1467336600000#1467345600000#1467352800000",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interestRaise:0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxAmount:100000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;millionProfit:1.61,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nowDate:1467342302000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;openHoursInterval:1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startTime:1467336600000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vip:false,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'delayTime':&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;financialsBar($('.js-financialsBar3'),&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"regular",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;annualrate:0.07,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bdid:5690,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bidType:3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fullDate:0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interestRaise:0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isDefault:0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:"种植贷D160701-005",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nowDate:1467342302220,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;packStatus:"WKS",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;packStatusName:"未开始",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;projectScale:500000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;releaseDate:1467352800000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;status:"YFB",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;surplusAmount:500000,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;term:1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title:"D01-005",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'productType':&nbsp;'NYB',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'delayTime':&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</div></div><div class="right-side-bottom-item-content">其他：<div><br>@实例化：financialsBar&nbsp;=&nbsp;new&nbsp;financialsBar(dom,&nbsp;datas);<br>&nbsp;&nbsp;@param&nbsp;dom&nbsp;{Dom}&nbsp;为理财块组件父级节点，将根据情况append模版，生成理财块节点；<br>&nbsp;&nbsp;@param&nbsp;datas&nbsp;{json}&nbsp;初始化组件的数据，数据格式如下<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>&nbsp;&nbsp;@param&nbsp;type&nbsp;{String}&nbsp;理财类型：新手（novice）、活期（current）、定期(regular)；<br>&nbsp;&nbsp;@param&nbsp;bdid&nbsp;{Number}&nbsp;标的id<br>&nbsp;&nbsp;@param&nbsp;name&nbsp;{String}&nbsp;标的名称<br>&nbsp;&nbsp;@param&nbsp;title&nbsp;{String}&nbsp;理财块状组件标题<br>&nbsp;&nbsp;@param&nbsp;term&nbsp;{Number}&nbsp;投资期限（月）<br>&nbsp;&nbsp;@param&nbsp;annualrate&nbsp;{Number}&nbsp;投资年利率<br>&nbsp;&nbsp;@param&nbsp;interestRaise&nbsp;{Number}&nbsp;加息利率<br>&nbsp;&nbsp;@param&nbsp;surplusAmount&nbsp;{Number}&nbsp;剩余可投金额<br>&nbsp;&nbsp;@param&nbsp;projectScale&nbsp;{Number}&nbsp;项目规模<br>&nbsp;&nbsp;@param&nbsp;status&nbsp;{String}&nbsp;状态，（新手和定期的状态为）SQZ:申请中;DSH:待审核;DFB:待发布;YFB:预发布;RZZ:融资中;DFP:待分配;HKZ:还款中;YJQ:已结清;YLB:已流宝;YDF:已垫付;YZF:已作废;YFP已分配<br>&nbsp;	（活期的状态为）SQZ:申请中;DSH:待审核;DFB:待发布;YFB:预发布;MJZ：募集中；YME：已满额；&nbsp;YZF:已作废;YFP:已分配<br>&nbsp;&nbsp;@param&nbsp;packStatus&nbsp;{String}&nbsp;后台包裹后的状态，新手和定期使用这个状态来做判断；WKS:未开始，QGZ：抢购中，YQW：已抢完，HKZ：收益中，YJQ：已结束<br>&nbsp;&nbsp;@param&nbsp;releaseDate&nbsp;{Number}&nbsp;发布时间（毫秒）<br><br><br>&nbsp;&nbsp;@param&nbsp;number&nbsp;{Number}&nbsp;零钱包编号<br>&nbsp;&nbsp;@param&nbsp;millionProfit&nbsp;{Number}&nbsp;******<br>&nbsp;&nbsp;@param&nbsp;startTime&nbsp;{Number}&nbsp;开始时间(毫秒)<br>&nbsp;&nbsp;@param&nbsp;endTime&nbsp;{Number}&nbsp;结束时间(毫秒)<br>&nbsp;&nbsp;@param&nbsp;hoursPoints{String}&nbsp;时间段<br>&nbsp;&nbsp;@param&nbsp;openHoursInterval{Number}&nbsp;零钱包T+0开放时间间隔(分)<br>&nbsp;&nbsp;@param&nbsp;vip&nbsp;{Boolean}&nbsp;是否是vip<br>&nbsp;&nbsp;@param&nbsp;maxAmount&nbsp;{Number}&nbsp;用户零钱包购买上限<br>&nbsp;&nbsp;@param&nbsp;releaseDate&nbsp;{Number}&nbsp;发布时间<br><br>&nbsp;&nbsp;@param&nbsp;bidType&nbsp;{Number}&nbsp;1:表示农优宝，2：表示新手标&nbsp;3表示种植贷&nbsp;4渠道&nbsp;5分期乐<br>&nbsp;</div></div></div><div class="right-side-bottom-item" data-mod="hovertips.js"><div class="right-side-bottom-item-author">作者：</div><div class="right-side-bottom-item-date">日期：</div><div class="right-side-bottom-item-description">描述：</div><div class="right-side-bottom-item-code">样例：<div>html:<br><br>&lt;div&nbsp;class="js-hovertips"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>js:<br><br>var&nbsp;HoverTips&nbsp;=&nbsp;require('/common/module/hovertips/hovertips');<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;HoverTips($('.js-hovertips'),&nbsp;'hovertips&nbsp;用例');<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</div></div><div class="right-side-bottom-item-content">其他：<div><br></div></div></div><div class="right-side-bottom-item" data-mod="pageCtrl.js"><div class="right-side-bottom-item-author">作者：</div><div class="right-side-bottom-item-date">日期：</div><div class="right-side-bottom-item-description">描述：分页组件，依赖模版 pageCtrl.tpl</div><div class="right-side-bottom-item-code">样例：<div>html:<br><br>&lt;div&nbsp;class="sort-page&nbsp;js-pagectrl"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>js:<br><br>var&nbsp;PageCtrl&nbsp;=&nbsp;require('/common/module/pageCtrl/pageCtrl.js'),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pagectrl&nbsp;=&nbsp;new&nbsp;PageCtrl($('.js-pagectrl'),&nbsp;pageFn);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;pagectrl.init({<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'page':&nbsp;10,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'idx':&nbsp;1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'max':&nbsp;5,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'total':&nbsp;20<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//点击分页标签响应事件<br>&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;pageFn(cur,&nbsp;prev)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//响应处理<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pagectrl.reset({<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'page':&nbsp;10,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'idx':&nbsp;cur,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'total':&nbsp;20<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</div></div><div class="right-side-bottom-item-content">其他：<div><br>@example&nbsp;实例化：pageCtrl&nbsp;=&nbsp;new&nbsp;PageCtrl(dom,&nbsp;pageActionFn);<br>&nbsp;&nbsp;@param&nbsp;dom&nbsp;{Dom}&nbsp;为分页组件父级节点，将根据情况append模版，生成分页节点；<br>&nbsp;&nbsp;@param&nbsp;pageActionFn&nbsp;{Function}&nbsp;点击页码回调，返回cur(当前点击页码),pre(点击前页码)两个参数；<br>&nbsp;<br>&nbsp;&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>&nbsp;&nbsp;@param&nbsp;page&nbsp;{Number}&nbsp;总页码数；<br>&nbsp;&nbsp;@param&nbsp;idx&nbsp;{Number}&nbsp;当前页码，默认从1开始<br>&nbsp;&nbsp;@param&nbsp;max&nbsp;{Number}&nbsp;最多显示数，可为空默认为5；限制页码区域，超出部分用…代替<br>&nbsp;&nbsp;@param&nbsp;total&nbsp;{Number}&nbsp;数据总条数<br>&nbsp;</div></div></div></div></div><script type="text/javascript">
+    var financialsSmlBar = require('/common/module/financialsBar/financialsSmlBar.js');
+    new financialsSmlBar($('.js-financialsSmlBar1'),{
+        "type": "regular",
+        "bdid": 1,
+        "title": "农优宝A1231213",
+        "term": 1,
+        "annualrate": 0.09,
+        "interestRaise": 0.01,
+        "surplusAmount": 30000,
+        "projectScale": 50000,
+        "packStatus": "RZZ",
+        "releaseDate": 425132121,
+        "bidType": 2,
+        "nowDate": 45641231321,
+        "isDefault":0,
+        'productType': 'NYB',
+        'delayTime': 0
+    });
+
+    new financialsSmlBar($('.js-financialsSmlBar2'),{
+        "type": "creditTransfer",
+        annualrate:0.11,
+        bdid:4005,
+        packStatus:"ZRZ",
+        remainAmount:0,
+        remainTerm:6,
+        title:"种植贷D31-002",
+        totalTerm:9,
+        zqid:132044,
+        zrAmount:100,
+        zrDate:"2016-07-01 09:04:29",
+        zrTime:1467335069000,
+        zrid:545,
+        'productType': 'NYB',
+        'delayTime': 0
+    });
+
+    ;
+ 	var rightsideBar = require('/common/module/rightsideBar/rightsideBar.js');
+	new rightsideBar($('.js-rightsideBar'));
+
+	;
+ 	var Tips = require('/common/module/tips/tips.js'),
+ 		$tips = $('.js-tips');
+
+ 	new Tips($tips, 'tips测试文本', '链接文本', '/pcapi/xxx.htm','tips','_self');
+
+	;
+    var financialsBar = require('/common/module/financialsBar/financialsBar.js');
+    new financialsBar($('.js-financialsBar1'), {
+        "type": "novice",
+        "bdid": 1,
+        "name": "农优宝A1231213",
+        "title": "新手专享",
+        "term": 1,
+        "annualrate": 0.09,
+        "interestRaise": 0.005,
+        "surplusAmount": 30000,
+        "projectScale": 50000,
+        "status": "RZZ",
+        "packStatus": "QGZ",
+        "releaseDate": 425132121,
+        "nowDate": 45641231321,
+        "surplusBuyCount":1,
+        'productType': 'NYB',
+        'delayTime': 0
+    });
+    
+    new financialsBar($('.js-financialsBar2'), {
+        "type": "current",
+        annualrate:0.058,
+        content:{
+            bdid: 329, 
+            name: "HQB20160630-0002", 
+            title: "零钱包",
+            status: "YME", 
+            surplusAmount: 0,
+            projectScale:1215300,
+            releaseDate:1467336600000,
+        },
+        endTime:1467356400000,
+        hoursPoints:"1467336600000#1467345600000#1467352800000",
+        interestRaise:0,
+        maxAmount:100000,
+        millionProfit:1.61,
+        nowDate:1467342302000,
+        openHoursInterval:1,
+        startTime:1467336600000,
+        vip:false,
+        'delayTime': 0
+    });
+    
+    new financialsBar($('.js-financialsBar3'), {
+        "type": "regular",
+        annualrate:0.07,
+        bdid:5690,
+        bidType:3,
+        fullDate:0,
+        interestRaise:0,
+        isDefault:0,
+        name:"种植贷D160701-005",
+        nowDate:1467342302220,
+        packStatus:"WKS",
+        packStatusName:"未开始",
+        projectScale:500000,
+        releaseDate:1467352800000,
+        status:"YFB",
+        surplusAmount:500000,
+        term:1,
+        title:"D01-005",
+        'productType': 'NYB',
+        'delayTime': 0
+    });
+
+    ;
+    var HoverTips = require('/common/module/hovertips/hovertips');
+    new HoverTips($('.js-hovertips'), 'hovertips 用例');
+
+    ;
+    var PageCtrl = require('/common/module/pageCtrl/pageCtrl.js'),
+        pagectrl = new PageCtrl($('.js-pagectrl'), pageFn);
+
+    pagectrl.init({
+        'page': 10,
+        'idx': 1,
+        'max': 5,
+        'total': 20
+    });
+
+    //点击分页标签响应事件
+    function pageFn(cur, prev) {
+        //响应处理
+        pagectrl.reset({
+            'page': 10,
+            'idx': cur,
+            'total': 20
+        });
+    }
+
+    ;</script></body>
+</html>

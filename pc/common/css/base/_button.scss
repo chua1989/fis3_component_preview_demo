@@ -1,0 +1,236 @@
+$lightGreen: #51c3c0;
+$green: #29aeaa;
+$darkGreen: #0c7f7c;
+$orange: #ff7930;
+$darkOrange: #fa6e21;
+$white: #fff;
+$lightGray: #999;
+$defaultGray: #666;
+$darkGray: #454545;
+$bgGray: #e4e4e4;
+$bgLightGray: #f3f3f3;
+$bgWhiteGray: #f7f7f7;
+$borderGray: #d2d2d2;
+$disableGray: #dadada;
+a{
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/*
+导航栏使用的按钮
+padding固定，宽度随内容长度变化而变化
+*/
+.tbtn{
+    display: inline-block;
+    border-radius: 2px;
+    border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+}
+@mixin tbtn-big {
+	padding: 0px 20px;
+    height: 38px;
+    line-height: 38px;
+	font-size: 14px;
+}
+@mixin tbtn-mid{
+	padding: 0px 20px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+}
+@mixin tbtn-small{
+	padding: 0px 20px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+}
+.tbtn-white {/*背景为白色，边框为绿色*/	
+	@include tbtn-mid;
+    margin-left: 10px;
+    padding: 0px 15px;
+    border-color: $green;
+    color: $green;
+    background: #fff;
+    &:hover{
+    	border-color: $darkGreen;
+    	color: $darkGreen;
+    }
+}
+.tbtn-orange{/*背景为橘色，边框为橘色*/
+	@include tbtn-mid;
+    margin-left: 10px;
+    padding: 0px 15px;
+    border-color: $orange;
+    color: #fff;
+    background: $orange;
+    &:hover{
+    	border-color: $darkOrange;
+    	background: $darkOrange;
+    	color: #fff;
+    }
+}
+@mixin tbtn($size) {
+    @if $size==big{
+    	@include tbtn-big;
+    }
+	@if $size==mid{
+		@include tbtn-mid;
+    }
+    @if $size==small{
+    	@include tbtn-small;
+    }
+}
+@each $size in big, mid, small {
+	/*背景为绿色，边框为绿色*/
+	.tbtn-#{$size}-green{
+		@include tbtn(#{$size});
+
+		border-color: $lightGreen;
+	    background: $lightGreen;
+		color: #fff;
+	    &:hover{
+	    	border-color: $green;
+	    	background: $green;
+	    	color: #fff;
+	    }
+	}
+
+	/*背景为灰白色，边框为灰色*/
+	.tbtn-#{$size}-gray{
+		@include tbtn(#{$size});
+
+		border-color: $borderGray;
+	    background: $bgWhiteGray;
+		color: $darkGray;
+		&:hover{
+			background: $bgLightGray;
+			color: $darkGray;
+		};
+	}
+
+	/*背景为灰白色，边框为灰色*/
+	.tbtn-#{$size}-disabled{
+		@include tbtn(#{$size});
+
+		border-color: $disableGray;
+	    background: $disableGray;
+	    color: $lightGray;
+	    cursor: default;
+	    &:hover{
+			background: $disableGray;
+			color: $lightGray;
+		};
+	}
+}
+
+/*
+固定宽度的按钮
+按大中小分为big,mid,small三种
+*/
+@mixin wbtn-xbig {
+	width: 324px;
+    height: 48px;
+    line-height: 48px;
+	font-size: 16px;
+}
+@mixin wbtn-big {
+	width: 218px;
+    height: 38px;
+    line-height: 38px;
+	font-size: 14px;
+}
+@mixin wbtn-mid{
+	width: 112px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+}
+@mixin wbtn-small{
+	width: 88px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+}
+.wbtn{
+	display: inline-block;
+	border-radius: 2px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	text-align: center;	
+}
+@mixin wbtn($size) {
+	@if $size==xbig{
+    	@include wbtn-xbig;
+    }
+    @if $size==big{
+    	@include wbtn-big;
+    }
+	@if $size==mid{
+		@include wbtn-mid;
+    }
+    @if $size==small{
+    	@include wbtn-small;
+    }
+}
+
+@each $size in xbig, big, mid, small {
+	/*背景为绿色，边框为绿色*/
+	.wbtn-#{$size}-green{
+		@include wbtn(#{$size});
+
+		border-color: $lightGreen;
+	    background: $lightGreen;
+		color: #fff;
+	    &:hover{
+	    	border-color: $green;
+	    	background: $green;
+	    	color: #fff;
+	    }
+	}
+
+	/*背景为灰白色，边框为灰色*/
+	.wbtn-#{$size}-gray{
+		@include wbtn(#{$size});
+
+		border-color: $borderGray;
+	    background: $bgWhiteGray;
+		color: $darkGray;
+		&:hover{
+			background: $bgLightGray;
+			color: $darkGray;
+		};
+	}
+
+	/*背景为灰白色，边框为灰色*/
+	.wbtn-#{$size}-disabled{
+		@include wbtn(#{$size});
+
+		border-color: $disableGray;
+	    background: $disableGray;
+	    color: $lightGray;
+	    cursor: default;
+	    &:hover{
+			background: $disableGray;
+			color: $lightGray;
+		};
+	}
+
+	/*背景为透明，边框为透明*/
+	.wbtn-#{$size}-transparent{
+		@include wbtn(#{$size});
+
+		border-color: transparent;
+	    background: transparent;
+		color: $orange;
+		&:hover{
+			color: $orange;
+		};
+	}
+}
+
+
+

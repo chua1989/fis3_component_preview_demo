@@ -1,0 +1,60 @@
+.hovertips {
+	position: relative;
+	display: inline-block;
+    margin-left: 3px;
+	width: 13px;
+	height: 13px;
+	vertical-align: top;
+	margin-top: 3px;
+	background: url(./icon-hovertips.png) no-repeat 0 0;
+}
+
+.hovertips:hover {
+	background-position: 0 -13px;
+}
+
+.hovertips-content {
+	position: absolute;
+	display: none;
+	left: -12px;
+    top: 20px;
+	min-width: 220px;
+	z-index: 10;
+}
+.hovertips-text {
+	display: inline-block;
+	padding: 7px 10px 10px;
+	line-height: 1.5;
+	font-size: 12px;
+	color: #666666;
+	border-radius: 3px;
+	background: #fef9d9;
+	border: 1px solid #c4c4c4;
+	box-shadow: 1px 2px 3px #CACACA;
+}
+.hovertips-content-hover {
+	display: inline-block;
+}
+.hovertips-arrow, .hovertips-arrow-inner {
+	position: absolute;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-width: 7px;
+	border-style: dashed dashed solid dashed;
+	
+}
+.hovertips-arrow {
+	left: 12px;
+    top: -13px;
+    border-color: transparent transparent #c4c4c4 transparent;
+}
+.hovertips-arrow-inner {
+    left: -7px;
+    top: -6px;
+    border-color: transparent transparent #fef9d9 transparent;
+}
+
+
+
+

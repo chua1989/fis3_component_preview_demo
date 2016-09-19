@@ -1,0 +1,45 @@
+/* aside */
+.aside {
+    width: 198px;
+    border: 1px solid #ebebeb;
+    border-bottom: none;
+    background: #fff;
+
+    .aside-title {
+        padding: 0 15px;
+        height: 30px;
+        line-height: 30px;
+        background: #f9f9f9;
+        color: #999;
+    }
+
+    .aside-list {
+        a {
+            display: block;
+            padding: 0 15px;
+            height: 50px;
+            line-height: 50px;
+            color: #000;
+            
+            &:hover { 
+                color: #666;
+                background: #f0fafa;
+            }
+        }
+
+        a.act {
+            position: relative;
+            background: #f0fafa;
+            left: -1px;
+            border-left: 3px solid #65d7d0;
+        }
+
+    }
+
+    .aside-title,
+    .aside-list a {
+        border-bottom: 1px solid #ebebeb;
+    }
+}
+
+

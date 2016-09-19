@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@import "base/base";
+@import "mod/header";
+@import "mod/footer";
+@import "mod/aside";
+@import "mod/crumbs";
+
+body{
+    min-width: 1330px;
+}
+.page {
+    background: #efefef;
+    border-bottom: 1px solid #e9e9e9;
+}
+.page-content, .w1200{
+    margin: 0 auto;
+    width: 1200px;
+}
+.no-data{
+    padding-top: 80px;
+    text-align: center;
+    margin: 0px auto;
+    img{
+        vertical-align: bottom;
+    }
+    i{
+        vertical-align: bottom;
+        margin-left: 10px;
+        font-size: 14px;
+        color: #999; 
+    }
+}
