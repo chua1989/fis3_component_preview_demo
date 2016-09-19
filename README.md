@@ -31,3 +31,7 @@ wrap.html是用来包裹组件可视化代码的。需要的js、css需要自己
 4.在fis编译之前先运行index.js文件，生成最新的v_components.html然后再fis编译打包，即可通过url访问
 
 5.具体的例子可以参考topBar和financialsBar
+
+
+
+最终在pc-dev目录下执行node server,然后访问http://localhost:300/v_components/v_components.html即可
