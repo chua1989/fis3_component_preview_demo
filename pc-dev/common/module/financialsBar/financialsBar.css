@@ -1,0 +1,183 @@
+@charset "UTF-8";
+i.orange {
+  color: #ff7930;
+}
+
+i.blue {
+  color: #29aeaa;
+}
+
+.financials-item {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 374px;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  text-align: center;
+  background: #fff;
+  /*overflow: hidden;*/
+}
+
+.financials-item.small {
+  float: left;
+  margin-top: 35px;
+  margin-right: 24px;
+  width: 280px;
+  height: 364px;
+}
+
+.financials-item-tag {
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  right: 0;
+  border-top-right-radius: 10px;
+}
+
+.financials-item > h3 {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.financials-item > h3.newer {
+  color: #ff7930;
+}
+
+.financials-item > h3 > span.newer {
+  color: #ff7930;
+}
+
+.financials-item-timelimit {
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+}
+
+.financials-item-timelimit > i {
+  font-size: 14px;
+}
+
+.financials-item-interestrate {
+  margin-top: 15px;
+  color: #ff7930;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.financials-item-interestrate > b {
+  font-size: 50px;
+  line-height: 1;
+}
+
+.financials-item-interestrate > i {
+  font-size: 40px;
+}
+
+.financials-item-interestrate-a {
+  margin-top: 5px;
+  color: #999;
+}
+
+.financials-item-intro-extra {
+  display: block;
+  margin: 35px auto 24px;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  color: #999;
+  font-size: 12px;
+}
+
+.financials-item-intro-title {
+  display: block;
+  margin: 50px auto 0px;
+  line-height: 1;
+  color: #999;
+  font-size: 12px;
+}
+
+.financials-item-intro, .financials-item-intro2 {
+  margin-top: 12px;
+  line-height: 1;
+  color: #999;
+  font-size: 12px;
+}
+
+.financials-item-progress {
+  margin: 15px auto 0;
+  height: 9px;
+  width: 220px;
+  background: #e4e4e4;
+  border-radius: 9px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.financials-item-progress > i {
+  height: 9px;
+  display: inline-block;
+  background: #51c3c0;
+  border-radius: 9px;
+  vertical-align: top;
+}
+
+.financials-item-operate {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 66px;
+  background: #e4e4e4;
+  text-align: center;
+}
+
+.financials-item-operate .wbtn {
+  margin-top: 12px;
+}
+
+.financials-item-operate .wbtn-big-transparent {
+  color: #ff7930;
+  vertical-align: middle;
+}
+
+.financials-item-operate .wbtn-big-transparent > img {
+  margin-right: 5px;
+}
+
+.financials-item-operate .wbtn-big-transparent > span {
+  vertical-align: middle;
+}
+
+/*给hovertip需求增加的修改*/
+.financials-item-tag .hovertips {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: none;
+}
+
+.financials-item-tag .hovertips .hovertips-content {
+  top: 30px;
+  left: 0;
+  width: 300px;
+}
+
+.financials-item-tag .hovertips .hovertips-arrow {
+  left: 40px;
+}
+
+.wbtn-financial-gray {
+  width: 218px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  border-color: #e4e4e4;
+  background: #e4e4e4;
+  color: #666;
+}
+
+.wbtn-financial-gray:hover {
+  color: #666;
+}
