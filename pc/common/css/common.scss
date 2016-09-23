@@ -1,10 +1,9 @@
 @charset "utf-8";
 
-@import "base/base";
-@import "mod/header";
-@import "mod/footer";
-@import "mod/aside";
-@import "mod/crumbs";
+@import "base/reset";
+@import "base/util";
+@import "base/button";
+@import "base/icon";
 
 body{
     min-width: 1330px;

@@ -12,11 +12,8 @@ fis.match('**mod.*.js', {
     .match('common/module/**.js', {
         isMod: true
     })
-    .match('common/js/**.js', {
+    .match('common/js/base/**.js', {
         isMod: true
-    })
-    .match('common/js/common.js', {
-        isMod: false
     });
 
 fis.match('**/_*.scss', {
@@ -42,22 +39,23 @@ fis.media('dev')
         parser: fis.plugin('imweb-tplv2')
     })
     .match('::package', {
+        prepackager: fis.plugin('component-preview',{
+            wrap: '/v_components/wrap.html',//组件可视化原型文件，用来包裹组件可视化代码
+            url: '/v_components.html', //目标文件
+            COMPath: '/common/module',//组件集合目录
+            moduleListInstead: 'instead of modules',//使用模块列表节点替换当前文本
+            moduleViewInstead: 'instead of view htmls',//使用模块视图列表节点替换当前文本
+            moduleCommentsInstead: 'instead of commnets',//使用模块注释列表节点替换当前文本
+            moduleJsInstead: 'instead of js'//使用js脚本节点替换当前文本
+        }),
         postpackager: fis.plugin('loader', {
             allInOne: false,
-            processor: {
-                '.html': 'html',
-                '.jsp': 'html'
-            },
             useInlineMap: false,
             resourceType: 'mod'
         })
     })
     .match('*', {
-        deploy: fis.plugin('nfd-deliver-dist-m', {
-            to: '../pc-dev',
-            html: 'all',
-            jspFrontPath: 'nfd/front/src/main/webapp/WEB-INF',
-            jspUserPath: 'nfd/user/src/main/webapp/WEB-INF',
-            rootPath: path.resolve(__dirname, '../../../../..')
+        deploy: fis.plugin('local-deliver', {
+            to: '../pc-dev'
         })
     });

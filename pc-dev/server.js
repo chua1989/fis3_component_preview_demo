@@ -1,8 +1,5 @@
 var express = require('express');
-var path = require('path');
 var app = express();
-var proxy = require('http-proxy').createProxyServer({});
-var fs = require('fs');
 
 // 静态文件输出
 app.use(express.static(__dirname));
