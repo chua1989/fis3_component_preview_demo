@@ -7,4 +7,4 @@ pc目录是demo文件，pc-dev是在pc目录下执行fis3 release dev生成的�
 
 最终在pc-dev目录下执行node server,然后访问http://localhost:300/v_components.html即可（缺少的模块自己安装）
 哈哈
-这个demo将作为demo的一个子模块
+这个demo将作为demo的一个子模块,haha
